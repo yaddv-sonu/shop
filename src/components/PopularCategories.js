@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const PopularCategories = () => {
@@ -10,6 +9,11 @@ const PopularCategories = () => {
     },
     { name: "Drinks", image: "https://source.unsplash.com/weekly?drink" },
     { name: "Bakery", image: "https://source.unsplash.com/weekly?bakery" },
+    // Add more popular categories as needed
+    { name: "Dairy", image: "https://source.unsplash.com/weekly?dairy" },
+    { name: "Meat", image: "https://source.unsplash.com/weekly?meat" },
+    { name: "Seafood", image: "https://source.unsplash.com/weekly?seafood" },
+    { name: "Snacks", image: "https://source.unsplash.com/weekly?snacks" },
     // Add more popular categories as needed
   ];
 
@@ -26,7 +30,7 @@ const PopularCategories = () => {
         Popular Categories
       </h2>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-4 gap-4">
         {rows.map((row, rowIndex) => (
           <div key={rowIndex} className="flex space-x-4">
             {row.map((category, index) => (

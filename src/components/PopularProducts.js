@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const PopularProducts = () => {
@@ -12,6 +11,17 @@ const PopularProducts = () => {
     },
     { name: "Mango", image: "https://source.unsplash.com/weekly?mango" },
     { name: "Grapes", image: "https://source.unsplash.com/weekly?grapes" },
+    // Add more popular fruits as needed
+    {
+      name: "Watermelon",
+      image: "https://source.unsplash.com/weekly?watermelon",
+    },
+    {
+      name: "Pineapple",
+      image: "https://source.unsplash.com/weekly?pineapple",
+    },
+    { name: "Kiwi", image: "https://source.unsplash.com/weekly?kiwi" },
+    { name: "Peach", image: "https://source.unsplash.com/weekly?peach" },
     // Add more popular fruits as needed
   ];
 
@@ -28,7 +38,7 @@ const PopularProducts = () => {
         Popular Products
       </h2>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-4 gap-4">
         {rows.map((row, rowIndex) => (
           <div key={rowIndex} className="flex space-x-4">
             {row.map((fruit, index) => (
