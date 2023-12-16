@@ -1,31 +1,48 @@
 // src/components/Header.js
 
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
-    <header className="bg-gray-800 p-4">
-      <nav className="flex items-center justify-between">
-        <div className="flex items-center space-x-4">
-          {/* Logo */}
-          <img src="path/to/your/logo.png" alt="Logo" className="w-10 h-10" />
-          <div className="text-white text-2xl font-bold">Fruit Shop</div>
-        </div>
-
-        {/* Search Bar */}
-        <div className="flex items-center">
-          <input
-            type="text"
-            placeholder="Search for fruits..."
-            className="p-2 mr-2 border border-white rounded"
+    <header className="bg-white p-4">
+      <div className="flex items-center justify-between">
+        {/* Logo and Search Bar */}
+        <div className="flex items-center space-x-96">
+          {/* Replace the logo with orangemerat image */}
+          <img
+            src="https://placekitten.com/50/50" // Replace this URL with the orangemerat image URL
+            alt="Logo"
+            className="w-10 h-10"
           />
-          <button className="bg-green-500 text-white p-2 rounded">
-            Search
-          </button>
+
+          {/* Add margin to create a gap between the logo and search bar */}
+          <div className="flex items-center ml-4">
+            {/* Search Bar */}
+            <input
+              type="text"
+              placeholder="Search for fruits..."
+              className="p-2 border border-white rounded"
+            />
+            <button className="bg-yellow-600 text-white p-2 rounded">
+              Search
+            </button>
+          </div>
         </div>
 
-        {/* Navigation Links */}
-        <ul className="flex space-x-4 text-white">
+        {/* Shopping Cart */}
+        <div className="flex items-center space-x-4">
+          {/* Add your shopping cart icon and link here */}
+          <a href="#" className="text-gray-800">
+            <FontAwesomeIcon icon={faShoppingCart} size="2x" />
+          </a>
+        </div>
+      </div>
+
+      {/* Navigation Links */}
+      <nav className="flex items-center justify-between mt-4 bg-yellow-600 p-4 rounded">
+        <ul className="flex space-x-6 text-white">
           <li>
             <a href="#">Home</a>
           </li>
@@ -46,8 +63,6 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-
-
     </header>
   );
 };

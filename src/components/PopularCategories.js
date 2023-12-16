@@ -17,7 +17,7 @@ const PopularCategories = () => {
     // Add more popular categories as needed
   ];
 
-  const itemsPerRow = 2;
+  const itemsPerRow = 3;
 
   const rows = [];
   for (let i = 0; i < popularCategories.length; i += itemsPerRow) {
@@ -30,19 +30,24 @@ const PopularCategories = () => {
         Popular Categories
       </h2>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 ">
         {rows.map((row, rowIndex) => (
           <div key={rowIndex} className="flex space-x-4">
             {row.map((category, index) => (
               <div key={index} className="flex flex-col items-center">
-                <img
-                  src={category.image}
-                  alt={category.name}
-                  className="w-40 h-20 object-cover rounded-md"
-                />
-                <a href="#" className="text-green-500 block mt-2">
-                  {category.name}
-                </a>
+                <div className="category-container bg-red-200 p-4">
+                  <img
+                    src={category.image}
+                    alt={category.name}
+                    className="w-20 h-10 object-cover rounded-md mb-2"
+                  />
+                  <a
+                    href="#"
+                    className="text-green-500 block text-center bg-blue-200 p-2 rounded-md"
+                  >
+                    {category.name}
+                  </a>
+                </div>
               </div>
             ))}
           </div>

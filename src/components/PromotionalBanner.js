@@ -1,4 +1,13 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTruck,
+  faHeadset,
+  faLock,
+  faMoneyBill,
+  faShippingFast,
+  faHeadphonesAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 const PromotionalBanner = () => {
   // Function to generate a random number between 1 and 1000 for the Unsplash image
@@ -21,20 +30,47 @@ const PromotionalBanner = () => {
         </p>
         <div className="flex justify-center space-x-8">
           <div>
-            <i className="fas fa-truck fa-3x text-white"></i>
+            <FontAwesomeIcon
+              icon={faTruck}
+              className="text-white text-3xl mb-2"
+            />
             <p className="text-sm mt-2">Free Shipping</p>
           </div>
           <div>
-            <i className="fas fa-headset fa-3x text-white"></i>
+            <FontAwesomeIcon
+              icon={faHeadset}
+              className="text-white text-3xl mb-2"
+            />
             <p className="text-sm mt-2">Customer Support</p>
           </div>
           <div>
-            <i className="fas fa-lock fa-3x text-white"></i>
+            <FontAwesomeIcon
+              icon={faLock}
+              className="text-white text-3xl mb-2"
+            />
             <p className="text-sm mt-2">100% Secure Payment</p>
           </div>
           <div>
-            <i className="fas fa-money-bill fa-3x text-white"></i>
+            <FontAwesomeIcon
+              icon={faMoneyBill}
+              className="text-white text-3xl mb-2"
+            />
             <p className="text-sm mt-2">Money-Back Guarantee</p>
+          </div>
+          {/* Additional Icons */}
+          <div>
+            <FontAwesomeIcon
+              icon={faShippingFast}
+              className="text-white text-3xl mb-2"
+            />
+            <p className="text-sm mt-2">Fast Shipping</p>
+          </div>
+          <div>
+            <FontAwesomeIcon
+              icon={faHeadphonesAlt}
+              className="text-white text-3xl mb-2"
+            />
+            <p className="text-sm mt-2">24/7 Customer Service</p>
           </div>
         </div>
       </div>

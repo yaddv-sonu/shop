@@ -15,7 +15,7 @@ const FollowUsInstagram = () => {
     return images;
   };
 
-  const fruitVegetableImages = getRandomFruitVegetableImages(3); // Adjust the count as needed
+  const fruitVegetableImages = getRandomFruitVegetableImages(6); // Increase the count as needed
 
   return (
     <div className="mt-4 bg-gray-200 p-4 rounded-lg">
@@ -24,12 +24,13 @@ const FollowUsInstagram = () => {
       </h2>
       <div className="flex items-center justify-center space-x-4">
         {fruitVegetableImages.map((imageUrl, index) => (
-          <img
-            key={index}
-            src={imageUrl}
-            alt={`Instagram ${index + 1}`}
-            className="w-24 h-24 object-cover rounded-full"
-          />
+          <div key={index} className="w-24 h-24 overflow-hidden">
+            <img
+              src={imageUrl}
+              alt={`Instagram ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </div>
         ))}
       </div>
       <p className="text-center text-gray-500 mt-2">
