@@ -74,7 +74,7 @@ const PopularProducts = () => {
       <div className="grid grid-flow-col">
         {popularFruits.map((fruit, index) => (
           <div key={index} className="flex flex-col items-center">
-            <div className="product-container bg-yellow-200 p-4 rounded-md">
+            <div className="product-container bg-white p-4 border-2">
               <img
                 src={fruit.image}
                 alt={fruit.name}

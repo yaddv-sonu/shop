@@ -35,7 +35,7 @@ const PopularCategories = () => {
           <div key={rowIndex} className="flex space-x-4">
             {row.map((category, index) => (
               <div key={index} className="flex flex-col items-center">
-                <div className="category-container bg-red-200 p-4">
+                <div className="category-container bg-white p-4 border-2">
                   <img
                     src={category.image}
                     alt={category.name}
@@ -43,7 +43,7 @@ const PopularCategories = () => {
                   />
                   <a
                     href="#"
-                    className="text-green-500 block text-center bg-blue-200 p-2 rounded-md"
+                    className=" block text-center p-2 rounded-md"
                   >
                     {category.name}
                   </a>

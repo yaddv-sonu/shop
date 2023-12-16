@@ -9,10 +9,12 @@ import Footer from "./components/Footer";
 import FollowUsInstagram from "./components/FollowUsInstagram";
 import PromotionalBanner from "./components/PromotionalBanner";
 import SummerSaleBanner from "./components/SummerSaleBanner";
+import HeaderOptions from "./components/HeaderOptions";
 
 function App() {
   return (
     <div>
+      <HeaderOptions/>
       <Header />
       <PromotionalBanner/>
       <PopularCategories />
